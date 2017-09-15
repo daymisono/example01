@@ -43,40 +43,43 @@
             // lbl_processName
             // 
             this.lbl_processName.AutoSize = true;
-            this.lbl_processName.Location = new System.Drawing.Point(13, 13);
+            this.lbl_processName.Location = new System.Drawing.Point(11, 10);
             this.lbl_processName.Name = "lbl_processName";
-            this.lbl_processName.Size = new System.Drawing.Size(102, 15);
+            this.lbl_processName.Size = new System.Drawing.Size(81, 12);
             this.lbl_processName.TabIndex = 0;
             this.lbl_processName.Text = "프로세스 이름";
             // 
             // lbl_processpath
             // 
             this.lbl_processpath.AutoSize = true;
-            this.lbl_processpath.Location = new System.Drawing.Point(13, 47);
+            this.lbl_processpath.Location = new System.Drawing.Point(11, 38);
             this.lbl_processpath.Name = "lbl_processpath";
-            this.lbl_processpath.Size = new System.Drawing.Size(102, 15);
+            this.lbl_processpath.Size = new System.Drawing.Size(81, 12);
             this.lbl_processpath.TabIndex = 1;
             this.lbl_processpath.Text = "프로세스 경로";
             // 
             // txt_processName
             // 
-            this.txt_processName.Location = new System.Drawing.Point(116, 7);
+            this.txt_processName.Location = new System.Drawing.Point(102, 6);
+            this.txt_processName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_processName.Name = "txt_processName";
-            this.txt_processName.Size = new System.Drawing.Size(733, 25);
+            this.txt_processName.Size = new System.Drawing.Size(642, 21);
             this.txt_processName.TabIndex = 2;
             // 
             // txt_processPath
             // 
-            this.txt_processPath.Location = new System.Drawing.Point(116, 42);
+            this.txt_processPath.Location = new System.Drawing.Point(102, 34);
+            this.txt_processPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_processPath.Name = "txt_processPath";
-            this.txt_processPath.Size = new System.Drawing.Size(571, 25);
+            this.txt_processPath.Size = new System.Drawing.Size(500, 21);
             this.txt_processPath.TabIndex = 3;
             // 
             // btn_registProcess
             // 
-            this.btn_registProcess.Location = new System.Drawing.Point(774, 42);
+            this.btn_registProcess.Location = new System.Drawing.Point(677, 34);
+            this.btn_registProcess.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_registProcess.Name = "btn_registProcess";
-            this.btn_registProcess.Size = new System.Drawing.Size(75, 25);
+            this.btn_registProcess.Size = new System.Drawing.Size(66, 20);
             this.btn_registProcess.TabIndex = 4;
             this.btn_registProcess.Text = "등록하기";
             this.btn_registProcess.UseVisualStyleBackColor = true;
@@ -84,52 +87,58 @@
             // 
             // btn_seelctProcessFile
             // 
-            this.btn_seelctProcessFile.Location = new System.Drawing.Point(693, 42);
+            this.btn_seelctProcessFile.Location = new System.Drawing.Point(606, 34);
+            this.btn_seelctProcessFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_seelctProcessFile.Name = "btn_seelctProcessFile";
-            this.btn_seelctProcessFile.Size = new System.Drawing.Size(75, 25);
+            this.btn_seelctProcessFile.Size = new System.Drawing.Size(66, 20);
             this.btn_seelctProcessFile.TabIndex = 5;
             this.btn_seelctProcessFile.Text = "경로선택";
             this.btn_seelctProcessFile.UseVisualStyleBackColor = true;
+            this.btn_seelctProcessFile.Click += new System.EventHandler(this.btn_seelctProcessFile_Click);
             // 
             // lst_processInfo
             // 
-            this.lst_processInfo.Location = new System.Drawing.Point(16, 78);
+            this.lst_processInfo.Location = new System.Drawing.Point(14, 62);
+            this.lst_processInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lst_processInfo.Name = "lst_processInfo";
-            this.lst_processInfo.Size = new System.Drawing.Size(833, 353);
+            this.lst_processInfo.Size = new System.Drawing.Size(729, 283);
             this.lst_processInfo.TabIndex = 6;
             this.lst_processInfo.UseCompatibleStateImageBehavior = false;
             // 
             // txt_log
             // 
-            this.txt_log.Location = new System.Drawing.Point(16, 438);
+            this.txt_log.Location = new System.Drawing.Point(14, 350);
+            this.txt_log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_log.Multiline = true;
             this.txt_log.Name = "txt_log";
-            this.txt_log.Size = new System.Drawing.Size(833, 144);
+            this.txt_log.Size = new System.Drawing.Size(729, 116);
             this.txt_log.TabIndex = 7;
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(693, 592);
+            this.btn_start.Location = new System.Drawing.Point(606, 474);
+            this.btn_start.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(75, 25);
+            this.btn_start.Size = new System.Drawing.Size(66, 20);
             this.btn_start.TabIndex = 9;
             this.btn_start.Text = "제어시작";
             this.btn_start.UseVisualStyleBackColor = true;
             // 
             // btn_stop
             // 
-            this.btn_stop.Location = new System.Drawing.Point(774, 592);
+            this.btn_stop.Location = new System.Drawing.Point(677, 474);
+            this.btn_stop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_stop.Name = "btn_stop";
-            this.btn_stop.Size = new System.Drawing.Size(75, 25);
+            this.btn_stop.Size = new System.Drawing.Size(66, 20);
             this.btn_stop.TabIndex = 8;
             this.btn_stop.Text = "제어정지";
             this.btn_stop.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 627);
+            this.ClientSize = new System.Drawing.Size(759, 502);
             this.Controls.Add(this.btn_start);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.txt_log);
@@ -140,6 +149,7 @@
             this.Controls.Add(this.txt_processName);
             this.Controls.Add(this.lbl_processpath);
             this.Controls.Add(this.lbl_processName);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
