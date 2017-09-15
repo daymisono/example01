@@ -123,6 +123,7 @@
             this.btn_start.TabIndex = 9;
             this.btn_start.Text = "제어시작";
             this.btn_start.UseVisualStyleBackColor = true;
+            this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
             // 
             // btn_stop
             // 
