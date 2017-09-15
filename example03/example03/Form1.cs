@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using example03.BLO;
 
 namespace example03
 {
@@ -85,21 +86,6 @@ namespace example03
             }
         }
 
-        private void btn_start_Click(object sender, EventArgs e)
-        {
-            this.txt_log.AppendText("프로세스 제어를 시작합니다.\n");
-
-            this.btn_stop.Enabled = true;
-            this.btn_start.Enabled = false;
-
-        }
-
-        private void btn_stop_Click(object sender, EventArgs e)
-        {
-            this.txt_log.AppendText("프로세스 제어를 종료합니다.\n");
-
-            this.btn_start.Enabled = true;
-            this.btn_stop.Enabled = false;
-        }
+       
     }
 }

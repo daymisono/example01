@@ -30,6 +30,15 @@ namespace example03.BLO
         public void Execute()
         {
             txt_log.AppendText("들어왔다.\n");
+
+            if (txt_log.InvokeRequired)
+            {
+             
+            }
+            else
+            {
+                txt_log.AppendText("들어왔다.\n");
+            }
         } 
 
     }
