@@ -18,7 +18,7 @@ namespace example01
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            System.Console.WriteLine("Test456789ㅀㅍ534ㅗㅎㄱ뎌ㅑㅗㅠㅕ퍅ㄹ");
+            System.Console.WriteLine("Test!!!!!");
         }
     }
 }
