@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Diagnostics;
 
 namespace example03
 {
@@ -18,7 +17,6 @@ namespace example03
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             this.lst_processInfo.BeginUpdate();
@@ -35,35 +33,20 @@ namespace example03
             String processName = txt_processName.Text;
             String processPath = txt_processPath.Text;
 
-            ListViewItem foundItem = this.lst_processInfo.FindItemWithText(processName);
-            if (foundItem != null)
-            {
-                txt_log.AppendText(processName + " 프로세스가 중복 되었습니다.\n");
-                return;
-            }
-
-            foundItem = this.lst_processInfo.FindItemWithText(processPath);
-            if (foundItem != null)
-            {
-                txt_log.AppendText(processPath + " 프로세스 경로가 중복 되었습니다.\n");
-                return;
-            }
-
-            ListViewItem lvi = new ListViewItem((this.lst_processInfo.Items.Count + 1).ToString());
-            lvi.SubItems.Add(processName);
-            lvi.SubItems.Add(processPath);
+            ListViewItem newItem = new ListViewItem((this.lst_processInfo.Items.Count+1).ToString());
+            newItem.SubItems.Add(processName);
+            newItem.SubItems.Add(processPath);
             
-            if(Process.GetProcessesByName(processName).Length == 0)
+            if( this.lst_processInfo.Items.Contains(newItem))
             {
-                lvi.SubItems.Add("정지상태");
-            }
-            else
+                MessageBox.Show("중복된 프로세스명이 존재합니다.");
+            }else
             {
-                lvi.SubItems.Add("동작 중");
+                MessageBox.Show("등록되었습니다.");
+                this.lst_processInfo.Items.Add(newItem);
             }
 
-            this.lst_processInfo.Items.Add(lvi);
-
+            newItem = null;
         }
 
         private void btn_seelctProcessFile_Click(object sender, EventArgs e)
@@ -85,6 +68,5 @@ namespace example03
             }
         }
 
-       
     }
 }
